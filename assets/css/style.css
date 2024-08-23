@@ -30,7 +30,8 @@
 body.theme-1 {
   --color-primary-rgb: 50, 50, 50; 
   --color-primary: #323232; 
-  --color-secondary:#EFF3F4;
+  --color-secondary:#EFF3F4; 
+  --heading-color:var(--color-primary);
   --text-color:#525252;
   --hover-color:#323232;
   --border-color:rgba(50, 50, 50, 0.202);
@@ -39,9 +40,37 @@ body.theme-2 {
   --color-primary-rgb: 0, 35, 73; 
   --color-primary: #002349; 
   --color-secondary:#FFF3D4;
+  --heading-color:var(--color-primary);
   --text-color:#002349;
   --hover-color:#002F63;
   --border-color:rgba(0, 35, 73, 0.202);
+}
+body.theme-3 {
+  --color-primary-rgb: 153, 119, 92; 
+  --color-primary: #99775C; 
+  --color-secondary:#EAE7DD;
+  --heading-color:#333333;
+  --text-color:#4B4B4B;
+  --hover-color:#B0703E;
+  --border-color:rgba(153, 119, 92, 0.202);
+}
+body.theme-4 {
+  --color-primary-rgb: 84, 46, 29; 
+  --color-primary: #542E1D; 
+  --color-secondary:#FFE7D3;
+  --heading-color:#323231;
+  --text-color:#323231;
+  --hover-color:#9F3505;
+  --border-color:rgba(var(--color-primary-rgb), 0.202);
+}
+body.theme-7 {
+  --color-primary-rgb: 27, 58, 63;
+  --color-primary: #1B3A3F; 
+  --color-secondary:#E5EDEF;
+  --heading-color:#2A3A3D;
+  --text-color:#2A3A3D;
+  --hover-color:#1C5C66;
+  --border-color:rgba(var(--color-primary-rgb), 0.202);
 }
 :root { 
   --container:1680px;
@@ -55,7 +84,8 @@ body.theme-2 {
   --h5: normal normal 600 34px/40px var(--primary-font);
   --h6: normal normal 500 26px/30px var(--secondary-font);
   --p: normal normal 400 18px/22px var(--secondary-font);
-  --fs1: normal normal 500 20px/24px  var(--secondary-font); 
+  --fs1: normal normal 500 22px/26px  var(--secondary-font); 
+  --fs2: normal normal 500 20px/24px  var(--secondary-font); 
   }
 
 html,

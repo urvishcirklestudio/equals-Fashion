@@ -38,6 +38,7 @@ footer{
     color: var(--white);
     border-radius: 50%;
     overflow: hidden;
+    transition: 0.4s;
 }
 .newsletter-form-wpr form .send-arrows svg{
     width: 15px;
@@ -47,7 +48,9 @@ footer{
     left: 50%;
     transform: translate(-50%,-50%);
 }
-
+.newsletter-form-wpr form .send-arrows:hover{
+    background-color: var(--hover-color);
+}
 .newsletter-form-wpr form .send-arrows:hover svg{ 
     animation: moveArrow 0.5s linear;
 }
@@ -76,3 +79,28 @@ footer{
     }
 }
  
+.ftr-links-wpr {
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    gap: 10px;
+}
+
+.ft-links-grp {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+.ft-link-ul {
+    display: grid;
+    gap: 10px;
+}
+.ft-link-ul .ft-links-items{
+    opacity: 0.8;
+    transition: 0.3s;
+}
+.ft-link-ul .ft-links-items:hover{
+    opacity: 1;
+}
+.ft-links-grp .ft-link-heading h6{
+    text-transform: capitalize;
+}
