@@ -49,6 +49,33 @@ $(document).ready(function(){
             $(".header-search").removeClass('open'); 
         }
     }); 
+
+    new Swiper('.hero-banner-swiper', {  
+        slidesPerView: 1,  
+        spaceBetween: 30,
+        speed: 1000,
+        loop: true,
+        // autoplay: {
+        //     delay: 4000,
+        //     waitForTransition: true,
+        //     disableOnInteraction: false,
+        // },
+        flipEffect: {
+            rotate: 30,
+            slideShadows: false,
+        },  
+        pagination: {
+            el: '.hero-swiper-pagination',
+            clickable: true,
+			renderBullet: function (index, className) {
+                return `<span class="${className}"><svg class="fp-arc-loader" width="20" height="20" viewBox="0 0 20 20"><circle class="path" cx="10" cy="10" r="8" fill="none" transform="rotate(-90 10 10)" stroke="#FFF" stroke-opacity="1" stroke-width="2px"></circle> <circle cx="10" cy="10" r="4" fill="#FFF"></circle></svg></span>`; 
+            },  
+          },
+          breakpoints: {
+             
+          }
+          
+    });
     
     
         

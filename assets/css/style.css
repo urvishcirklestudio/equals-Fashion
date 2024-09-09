@@ -459,9 +459,24 @@ p {
   max-width: 14px;
   max-height: 14px;
 }
-@media screen and (max-width:767px) {
-  :root{
-    --p:normal normal 400 16px/20px var(--secondary-font)
+@media screen and (max-width:1280px) {
+}
+ 
+@media screen and (max-width:767px) { 
+  :root {
+    --container: 1680px;
+    --white: #ffffff;
+    --primary-font: "Sintony", sans-serif;
+    --secondary-font: "Poppins", sans-serif;
+    --h1: normal normal 700 54px/66px var(--primary-font);
+    --h2: normal normal 700 48px/58px var(--primary-font);
+    --h3: normal normal 700 40px/46px var(--primary-font);
+    --h4: normal normal 600 36px/40px var(--primary-font);
+    --h5: normal normal 600 28px/32px var(--primary-font);
+    --h6: normal normal 500 22px/24px var(--secondary-font);
+    --p:normal normal 400 16px/20px var(--secondary-font);
+    --fs1: normal normal 500 20px/24px  var(--secondary-font);
+    --fs2: normal normal 500 18px/22px  var(--secondary-font);
   } 
   .desk-only-flex,
   .desk-only {
@@ -475,9 +490,16 @@ p {
   }
 }
 @media screen and (max-width:575px) { 
+  .btn {
+    height: 48px;
+  }  
   input { 
     padding: 2px 15px; 
     height: 34px; 
   }
+  .btn-icons .icons {
+    width: 10px;
+    height: 10px;
+  } 
 }
  
