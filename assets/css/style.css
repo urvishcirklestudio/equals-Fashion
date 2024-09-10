@@ -461,7 +461,7 @@ p {
 }
 
 .main-section{
-  padding: 50px 0;
+  margin: 80px 0;
 }
 .section-headding{
   margin-bottom: 40px;
@@ -474,14 +474,15 @@ p {
 .section-headding .headding-name{
   flex: 1;  
 }
-.slider-btn-grp {
+.section-headding .slider-btn-grp {
   display: flex;
   align-items: center; 
   gap: 14px;
+  --btn-wh:44px;
 }
-.slider-btn-grp .slider-nav{
-  width: 44px;
-  height: 44px;
+.section-headding .slider-btn-grp .slider-nav{
+  width:var(--btn-wh);
+  height: var(--btn-wh);
   border-radius: 50%;
   background-color: var(--color-primary);
   overflow: hidden;
@@ -495,11 +496,11 @@ p {
   justify-content: center; 
 
 }
-.slider-btn-grp .slider-nav svg{
+.section-headding .slider-btn-grp .slider-nav svg{
   max-width: 26px;
 }
 
-.slider-btn-grp .slider-nav:after {
+.section-headding .slider-btn-grp .slider-nav:after {
   content: "";
   background-image: linear-gradient(90deg, transparent, hsla(0, 0%, 100%, .25), transparent);
   height: 100%;
@@ -509,11 +510,11 @@ p {
   transform: skew(-20deg);
   width: 200%;
 }
-.slider-btn-grp .slider-nav:hover:after { 
+.section-headding .slider-btn-grp .slider-nav:hover:after { 
   animation: shine .75s cubic-bezier(.01,.56,1,1); 
 }
    
-.slider-btn-grp .slider-nav:active{
+.section-headding .slider-btn-grp .slider-nav:active{
   box-shadow: rgba(0, 0, 0, 0.842) 0px 5px 10px 0px inset;  
 }
  
@@ -523,16 +524,14 @@ p {
   }
 }
 @media screen and (max-width:1280px) {
+  :root { 
+    --h2: normal normal 700 48px/54px var(--primary-font);
+  } 
 }
  
 @media screen and (max-width:767px) { 
-  :root {
-    --container: 1680px;
-    --white: #ffffff;
-    --primary-font: "Sintony", sans-serif;
-    --secondary-font: "Poppins", sans-serif;
-    --h1: normal normal 700 54px/66px var(--primary-font);
-    --h2: normal normal 700 48px/58px var(--primary-font);
+  :root { 
+    --h1: normal normal 700 54px/66px var(--primary-font); 
     --h3: normal normal 700 40px/46px var(--primary-font);
     --h4: normal normal 600 36px/40px var(--primary-font);
     --h5: normal normal 600 28px/32px var(--primary-font);
@@ -551,8 +550,24 @@ p {
   .mob-only {
     display: block;
   }
+  .main-section{
+    margin: 50px 0;
+  }
+  .section-headding .slider-btn-grp { 
+    --btn-wh:30px;
+    gap: 6px;
+  }
+  .section-headding {
+    margin-bottom: 30px;
+  } 
+  .section-headding .headding-name{
+    font:var(--h3)
+  }
 }
 @media screen and (max-width:575px) { 
+  .container { 
+    padding: 0 16px;
+  } 
   .btn {
     height: 48px;
   }  
@@ -563,6 +578,16 @@ p {
   .btn-icons .icons {
     width: 10px;
     height: 10px;
+  }
+  .section-headding .slider-btn-grp { 
+    --btn-wh:25px;
+    gap: 4px;
+  }
+  .section-headding .headding-name{
+    font:var(--h5)
   } 
+  .section-headding {
+    margin-bottom: 20px;
+  }
 }
  

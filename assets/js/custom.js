@@ -73,7 +73,7 @@ $(document).ready(function(){
         }
     });
     const BrandLogoSwiper = new Swiper('.brand-logo-swiper', {  
-        slidesPerView: 3,  
+        slidesPerView: 12,  
         spaceBetween: 30, 
         speed: 1000, 
         loop:true,
@@ -98,6 +98,29 @@ $(document).ready(function(){
             1280: {
               slidesPerView: 10,
             },
+            1440: {
+              slidesPerView: 12,
+            },
+        }
+    });
+    const TrandyCollection = new Swiper('.trandy-collection-swiper', {  
+        spaceBetween: 30,
+        slidesPerView: 1,
+        loop: true, 
+        navigation: {
+            nextEl: '.Collection-section .swiper--next',
+            prevEl: '.Collection-section .swiper--prev',
+        },
+        breakpoints: {
+            575: {
+              slidesPerView: 1.6
+            },
+            768: {
+              slidesPerView: 2
+            },
+            992: {
+              slidesPerView: 3,
+            }, 
         }
     });
     
