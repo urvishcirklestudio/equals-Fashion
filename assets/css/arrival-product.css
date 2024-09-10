@@ -1,0 +1,17 @@
+.arrivals-pro-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.arrivals-pro-grid .arrival-grid-items .img-box{
+    padding-bottom: 100%;
+}
+@media screen and (max-width: 767px) {
+
+}
+@media screen and (max-width: 575px) {
+    .arrivals-pro-grid{ 
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+    }
+}

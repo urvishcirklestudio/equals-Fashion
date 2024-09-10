@@ -75,14 +75,14 @@ body.theme-7 {
 :root { 
   --container:1680px;
   --white: #ffffff;
-  --primary-font: "Sintony", sans-serif;
-  --secondary-font: "Poppins", sans-serif;
-  --h1: normal normal 700 60px/70px var(--primary-font);
-  --h2: normal normal 700 54px/64px var(--primary-font);
-  --h3: normal normal 700 46px/54px var(--primary-font);
-  --h4: normal normal 600 40px/47px var(--primary-font);
-  --h5: normal normal 600 34px/40px var(--primary-font);
-  --h6: normal normal 500 26px/30px var(--secondary-font);
+  --primary-font: "Quattrocento", sans-serif;
+  --secondary-font: "Quattrocento sans", sans-serif;
+  --h1: normal normal 700 56px/66px var(--primary-font);
+  --h2: normal normal 700 52px/62px var(--primary-font);
+  --h3: normal normal 700 42px/50px var(--primary-font);
+  --h4: normal normal 600 36px/42px var(--primary-font);
+  --h5: normal normal 600 30px/38px var(--primary-font);
+  --h6: normal normal 500 24px/28px var(--secondary-font);
   --p: normal normal 400 18px/22px var(--secondary-font);
   --fs1: normal normal 500 22px/26px  var(--secondary-font); 
   --fs2: normal normal 500 20px/24px  var(--secondary-font); 
