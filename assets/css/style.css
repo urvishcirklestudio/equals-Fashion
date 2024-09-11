@@ -527,18 +527,30 @@ p {
   :root { 
     --h2: normal normal 700 48px/54px var(--primary-font);
   } 
+  .section-headding {
+    margin-bottom: 20px;
+  } 
+}
+@media screen and (max-width:991px) {
+  :root { 
+    --h2: normal normal 700 44px/52px var(--primary-font);
+  } 
+  .main-section {
+    margin: 60px 0;
+  } 
 }
  
 @media screen and (max-width:767px) { 
   :root { 
-    --h1: normal normal 700 54px/66px var(--primary-font); 
-    --h3: normal normal 700 40px/46px var(--primary-font);
-    --h4: normal normal 600 36px/40px var(--primary-font);
-    --h5: normal normal 600 28px/32px var(--primary-font);
-    --h6: normal normal 500 22px/24px var(--secondary-font);
+    --h1: normal normal 700 50px/62px var(--primary-font); 
+    --h2: normal normal 700 42px/46px var(--primary-font);
+    --h3: normal normal 700 38px/44px var(--primary-font);
+    --h4: normal normal 600 32px/42px var(--primary-font);
+    --h5: normal normal 600 26px/30px var(--primary-font);
+    --h6: normal normal 500 20px/24px var(--secondary-font);
     --p:normal normal 400 16px/20px var(--secondary-font);
-    --fs1: normal normal 500 20px/24px  var(--secondary-font);
-    --fs2: normal normal 500 18px/22px  var(--secondary-font);
+    --fs1: normal normal 500 18px/22px  var(--secondary-font);
+    --fs2: normal normal 500 16px/20px  var(--secondary-font);
   } 
   .desk-only-flex,
   .desk-only {
@@ -551,20 +563,24 @@ p {
     display: block;
   }
   .main-section{
-    margin: 50px 0;
+    margin: 44px 0;
   }
   .section-headding .slider-btn-grp { 
     --btn-wh:30px;
     gap: 6px;
-  }
-  .section-headding {
-    margin-bottom: 30px;
   } 
-  .section-headding .headding-name{
+  /* .section-headding .headding-name{
     font:var(--h3)
-  }
+  } */
 }
 @media screen and (max-width:575px) { 
+  :root { 
+    --h1: normal normal 700 42px/46px var(--primary-font); 
+    --h2: normal normal 700 32px/40px var(--primary-font);
+    --h3: normal normal 700 30px/36px var(--primary-font);
+    --h4: normal normal 600 28px/32px var(--primary-font);
+    --h5: normal normal 600 24px/28px var(--primary-font); 
+  } 
   .container { 
     padding: 0 16px;
   } 
@@ -583,9 +599,9 @@ p {
     --btn-wh:25px;
     gap: 4px;
   }
-  .section-headding .headding-name{
-    font:var(--h5)
-  } 
+  /* .section-headding .headding-name{
+    font:var(--h3)
+  }  */
   .section-headding {
     margin-bottom: 20px;
   }
