@@ -125,12 +125,15 @@ $(document).ready(function(){
     });
     const NewCollectionProduct = new Swiper('.nw-col-swiper', {  
         spaceBetween: 20,
-        slidesPerView: 1.2, 
-        // navigation: {
-        //     nextEl: '.Collection-section .swiper--next',
-        //     prevEl: '.Collection-section .swiper--prev',
-        // },
+        slidesPerView: 2, 
+        navigation: {
+            nextEl: '.new-collection-section .swiper--next',
+            prevEl: '.new-collection-section .swiper--prev',
+        },
         breakpoints: {
+            200: {
+              slidesPerView: 1.2
+            }, 
             480: {
               slidesPerView: 1.6
             }, 
@@ -138,8 +141,7 @@ $(document).ready(function(){
               slidesPerView: 2
             }, 
             992:{
-                spaceBetween: 20,
-                slidesPerView: 2
+                spaceBetween: 20, 
             },
             1280:{
                 spaceBetween: 30, 

@@ -2,100 +2,17 @@
     max-width: calc(50% - 20px); 
     width: 100%;
 }
-.nw-col-product{
-    display: grid;
-    gap: 18px;
-    /* border: 1px solid var(--border-color); */
-    /* padding: 10px; */
-    border-radius: 8px; 
-    overflow: hidden;
-}
+.nw-col-swiper .swiper-slide{
+    height: auto;
+} 
 .nw-col-pro-img{
     position: relative;
     overflow: hidden;
 }
-.nw-col-image .img-box,
-.nw-col-pro-img .img-box{
+.nw-col-image .img-box{
     padding-bottom: 104%;
-}
-
-.new-collection-wpr .nw-col-products-wpr{
-    /* padding: 0 20px; */
-}
-.nc-pro-name{
-    font:var(--fs2);
-    font-weight: 700;
-    height: 48px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
-.nc-categories-reviews .nc-pro-reviews{
-    font: 12px;
-    /* font-weight: 700; */
-    line-height: 1;
-}
-.nc-categories-reviews .nc-pro-reviews .icons{
-    width: 14px;
-    height: 14px;
-    color: rgb(255, 211, 17);
-    margin-left: 2px;
-}
-.nc-categories-reviews a:hover,
-.nc-pro-name a:hover{
-    color: var(--hover-color);
-}
-.nw-col-pro-cont{
-    display: grid;
-    gap: 10px; 
-    padding:0 10px;
-}
-.nc-pro-price .compare-price{
-    margin-left: 10px;
-    opacity: 0.5;
-}
-.nw-col-product .add-cart-btn {
-    position: absolute;
-    bottom: 10px;
-    right: -50px;
-    transition: 0.3s;
-    
-}
-.nw-col-product:hover .add-cart-btn {
-    right: 10px;
-}
-.nw-col-product .add-cart-btn .btn{
-    height: 36px;
-    width: 36px;
-    padding: 6px;
-    border-radius: 4px;
-    background-color: rgba(0,0,0,0.8); 
-    border-color: rgba(0,0,0,0.8);
-}
-.nw-col-product .add-cart-btn .btn:hover{
-    background-color: #000;
-    color: var(--white);
-}
-.nc-categories-reviews .nc-pro-reviews .icons svg,
-.nw-col-product .add-cart-btn .btn svg{
-    max-height: 100%;
-    max-width: 100%; 
-}
-.nc-pro-label{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    border-radius: 20px;
-    padding: 6px 12px;
-    background-color: var(--color-primary);
-    font-size: 14px;
-    line-height: 1;
-    color: var(--white);
-}
-.nw-headig-text{
-    color: var(--color-primary);
+} 
+.nw-headig-text{ 
     margin-bottom: 24px;
 }
 @media screen and (max-width: 1280px) {
