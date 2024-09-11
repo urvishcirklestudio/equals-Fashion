@@ -331,6 +331,9 @@ button {
 .text-right {
   text-align: right;
 }
+.text-delete{
+  text-decoration: line-through;
+}
 
 .position-relative {
   position: relative;
@@ -433,13 +436,17 @@ p {
   color:var(--color-primary);
   border-radius:8px;
   font-weight:700;
-  height:56px; 
+  height:46px; 
   display: flex;
   align-items:center;
   justify-content:center;
   border: 1px solid var(--color-primary);
   padding: 0 20px;
   transition: all 0.3s ease-in-out;
+}
+.btn-fill{  
+  color:var(--white); 
+  background-color: var(--color-primary);
 }
 .btn-radius{
   border-radius:50px;
@@ -448,16 +455,20 @@ p {
   background-color: var(--color-primary);
   color: var(--white);
  }
+.btn-fill:hover{
+  background-color: transparent;
+  color:var(--color-primary);
+}
 /* .btn-icons{
   padding-right: 0;
 } */
 .btn-icons .icons{
-  width: 14px;
-  height: 14px; 
+  width: 18px;
+  height: 18px; 
 }
 .btn-icons .icons svg{
-  max-width: 14px;
-  max-height: 14px;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .main-section{
@@ -526,6 +537,7 @@ p {
 @media screen and (max-width:1280px) {
   :root { 
     --h2: normal normal 700 48px/54px var(--primary-font);
+    --h3: normal normal 700 40px / 46px var(--primary-font);  
   } 
   .section-headding {
     margin-bottom: 20px;

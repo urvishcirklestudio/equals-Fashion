@@ -39,6 +39,10 @@
 .banner-content .banner-btn .icons{
     margin-left: 10px;
 }
+.banner-content .banner-btn .icons svg{
+    max-width: 14px;
+    max-height: 14px;
+}
 .banner-image .img-box{
     position: relative;
     padding-bottom: 90%;
