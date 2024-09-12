@@ -6,6 +6,19 @@
 .arrivals-pro-grid .arrival-grid-items .img-box{
     padding-bottom: 100%;
 }
+.arrival-pro-label{
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.50); 
+    backdrop-filter: blur( 1px );
+    -webkit-backdrop-filter: blur( 1px ); 
+    color: var(--white);
+    padding: 10px;
+    
+}
 @media screen and (max-width: 767px) {
 
 }

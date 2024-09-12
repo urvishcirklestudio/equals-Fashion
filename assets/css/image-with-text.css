@@ -16,7 +16,7 @@
     margin-bottom: 20px;
 }
 .img-with-text-wpr .right-text-wpr .cont-wpr .heading-text{
-    color: var(--color-primary);
+    color: var(--heading-color);
 }
 .img-with-text-wpr .right-text-wpr .cont-wpr :not(:last-child){
     margin-bottom: 10px;
