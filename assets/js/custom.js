@@ -147,7 +147,29 @@ $(document).ready(function(){
                 spaceBetween: 30, 
             }  
         }
+    }); 
+    const blogPostSwiper = new Swiper('.blog-post-swiper', {  
+        spaceBetween: 20,
+        slidesPerView: 3,  
+        navigation: {
+            nextEl: '.blog-section .swiper--next',
+            prevEl: '.blog-section .swiper--prev',
+        },
+        breakpoints: {
+            200: {
+                slidesPerView: 1.2
+            }, 
+            480: {
+                slidesPerView: 1.6
+            }, 
+            600: {
+                slidesPerView: 2
+            },
+            992: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            }, 
+        }
     });
-       breakpointChecker();
         
 })
