@@ -655,11 +655,11 @@ header{
         width: 100%;
         flex: auto;
         order: 3;
-        position: absolute; 
+        position: absolute;
         left: 0;
         top: calc(100% + 1px);
-        background-color: var(--white);
-        z-index: -1; 
+        /* background-color: var(--white); */
+        z-index: -1;
         display: none;
         visibility: hidden;
         opacity: 0;
