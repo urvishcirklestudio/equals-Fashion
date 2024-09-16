@@ -62,7 +62,7 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     flex: 1;
-    color: var(--heading-color);
+    color: var(--black);
 }
 .product-price .compare-price{
     margin-left: 10px;
