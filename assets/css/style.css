@@ -1,3 +1,6 @@
+/* Banner text */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 /* Fonts pairinng - 1 */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900');
 @import url('https://fonts.googleapis.com/css2?family=Sintony:wght@400;700&display=swap');
@@ -78,6 +81,7 @@ body.theme-7 {
   --black: #252525;
   --primary-font: "Quattrocento", sans-serif;
   --secondary-font: "Quattrocento sans", sans-serif;
+  --banner-font: "Bebas Neue", sans-serif;;
   --h1: normal normal 700 56px/66px var(--primary-font);
   --h2: normal normal 700 52px/62px var(--primary-font);
   --h3: normal normal 700 42px/50px var(--primary-font);
@@ -554,6 +558,25 @@ p {
   box-shadow: rgba(0, 0, 0, 0.842) 0px 5px 10px 0px inset;  
 }
  
+.breadcrumb{
+  display: flex;
+  align-items: center; 
+}
+.breadcrumb li{
+  display: flex;
+  align-items: center;
+}
+.breadcrumb li:has(a)::after{
+  content: '\00bb';
+  color: #bbbbbb;
+  margin-left: 10px;
+}
+.breadcrumb li > a:hover{
+  color: var(--black);
+}
+.breadcrumb li:not(:last-child){
+  margin-right: 10px;
+}
  
 @keyframes shine {
   100% {
@@ -578,6 +601,13 @@ p {
 
 /* ==========================================================
                   Index Page
+==========================================================*/
+/* ==========================================================
+                      About Page
+==========================================================*/
+
+/* ==========================================================
+                      About Page
 ==========================================================*/
 
 /* ==========================================================
