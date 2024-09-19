@@ -10,15 +10,15 @@
 
 .blog-cont .blog-date{
     font-size: 14px;
-    color: #c77735;
+    color: #e60013;
 }
 .blog-cont .blog-title a{
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--black);
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 .blog-cont .blog-title a:hover{
@@ -34,7 +34,21 @@
 .blog-cont .read-more{
     display: flex; 
 }
-.blog-cont .read-more .btn{
-    font-size: 14px;
-    height: 36px;
+.blog-cont .read-more a{
+    font-size: 14px; 
+    text-decoration: underline;
+    font-weight: bold;
+}
+.blog-cont .read-more a:hover{
+    color: var(--black);
+    text-decoration: none;
+}
+.blog-view-all{
+    margin-top: 20px;
+}
+.blog-view-all .btn{
+    display: inline-flex;
+    max-width: 200px;
+    width: 100%;
+    margin: 0 auto;
 }
