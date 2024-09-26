@@ -52,3 +52,33 @@
     width: 100%;
     margin: 0 auto;
 }
+.blog-posts-section .container{
+    max-width: 1200px;
+}
+.blog-post-wpr{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+}
+.artical-pagination{
+    margin-top: 100px;
+}
+@media screen and (max-width: 991px) {
+    .artical-pagination{
+        margin-top: 80px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .blog-post-wpr {
+        gap: 20px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .blog-post-wpr {
+        grid-template-columns: repeat(1,1fr);
+        gap: 30px;
+    }
+    .artical-pagination{
+        margin-top: 50px;
+    }
+}
