@@ -39,11 +39,14 @@ $(document).ready(function(){
     $('.header-search-li .search-icons').click(function(){ 
         $('.header-search').toggleClass('open'); 
     }); 
-    $('.header-cart-li .cart-icons').click(function(){  
-        $('#cart-sidebar').addClass('open'); 
+    $('[data-open-popup]').click(function(){  
+        var openId= $(this).data('open-popup'); 
+        $(openId).addClass('open')
     }); 
-    $('#cart-sidebar .close-icons, #cart-sidebar .continue-shopping').click(function(){  
-        $('#cart-sidebar').removeClass('open'); 
+    $('[data-close-popup]').click(function(){  
+        var CloseId= $(this).data('close-popup'); 
+        $(CloseId).removeClass('open')
+        
     }); 
     
     $(document).mouseup(function(e){ 
@@ -56,7 +59,7 @@ $(document).ready(function(){
             $(".header-search").removeClass('open'); 
         }
         if (!$(".drawer-wpr").is(e.target) && $(".drawer-wpr").has(e.target).length === 0){
-            $("#cart-sidebar").removeClass('open'); 
+            $(".sidebar-drawer").removeClass('open'); 
         }
     }); 
 
@@ -181,5 +184,79 @@ $(document).ready(function(){
             }, 
         }
     });
+
+    // Collection Filter js 
+    var filterDwrLi = document.querySelectorAll('.filter-dwr-li .fltr-title');
+    
+    filterDwrLi.forEach((ele, index, array) => { 
+         
+        if(index == 0){
+            ele.nextElementSibling.style.height= ele.nextElementSibling.offsetHeight + 'px'
+        }else{
+            ele.nextElementSibling.style.height='0px'
+        }
+        ele.addEventListener('click', function(e) {
+            ele.parentElement.classList.toggle('active')
+            if(ele.nextElementSibling.offsetHeight == 0){
+                ele.nextElementSibling.style.height= `${ele.nextElementSibling.querySelector('.fltr-grp').offsetHeight}px`;
+            }else{
+                ele.nextElementSibling.style.height='0px'   
+            }
+            
+            setHeight(index, array)
+        })        
+    })
+    
+    function setHeight(num, filterDwrLi){         
+        filterDwrLi.forEach((ele, index, array) => {            
+            if(num != index){
+                ele.parentElement.classList.remove('active')
+                ele.nextElementSibling.style.height='0px'
+            }
+        })
+    }
+
+    var filterInput = document.querySelectorAll('.filter-dwr-ul input');
+    var FilterValUl = document.querySelector('.filter-val-ul'); 
+    
+    // filterInput.forEach((ele, i, array) => {
+    //     ele.addEventListener('click', function(e) {
+    //      createFilterli()
+    //     });
+    // })
+    
+    $('.filter-dwr-ul input').click(function(){
+        var inputType = $(this).attr('type')
+        if(inputType === 'radio' || inputType === 'checkbox'){
+            createFilterli()
+        }
         
+    })
+    $(document).on('click', '.filter-val-ul .filter-val-items',function(){
+        var inputId = $(this).data('input-id')
+        var inputType = $(inputId).attr('type')
+
+        if(inputType === 'radio' || inputType === 'checkbox'){
+            $(`input${inputId}`).prop('checked', false);
+            createFilterli()
+        }
+    })
+    
+    function createFilterli(){
+        FilterValUl.innerHTML = "";
+        if($('.filter-val-ul li').length >= 0){
+            $('.cl-filter-value').show();
+        }else{
+            $('.cl-filter-value').hide()
+        }
+        filterInput.forEach((ele, i, array) => {
+            if(ele.checked){
+                var li = `<li class="filter-val-items flex" data-input-id="#${ele.getAttribute("id")}"><span>${ele.value}</span><button type="button" class="remove-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path></svg></button></li>`;
+                $('.filter-val-ul').append(li);
+            }
+        })
+    }
+
+        
+     
 })
