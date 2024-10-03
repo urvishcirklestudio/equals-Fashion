@@ -61,6 +61,7 @@ $(document).ready(function(){
         if (!$(".header-nav nav").is(e.target) && $(".header-nav nav").has(e.target).length === 0){
             $(".header-nav").removeClass('nav-show');
             $(".menu-icons").removeClass('active');
+            $(document).scrollTop(ht)
             // $('body').removeClass('overflow-hidden');
         }
         if (!$(".header-search-form-wpr").is(e.target) && $(".header-search-form-wpr").has(e.target).length === 0 && !$(".header-search-li").is(e.target) && $(".header-search-li").has(e.target).length === 0){
