@@ -19,18 +19,17 @@ $(document).ready(function(){
             $(this).parents('.nav-items').find('.inner-menu').addClass('open') 
             $(this).parents('.nav-items').find('.inner-menu[main-inner-open]').find('.main-back-arrow .nav-heading-name').text($(this).parents('.nav-items').attr('data-nav-name'));
     });
-    var ht;
-    $('.menu-icons:not(.mob-nav-close)').click(function(){   
-        var bodyScrollVal = $(document).scrollTop();             
-        $('body').css('--scroll-top',`-${bodyScrollVal}px`)  
-        ht = bodyScrollVal
+    var scrollTopVal =null;
+    $('.menu-icons:not(.mob-nav-close)').click(function(){ 
+        $('body').css('--scroll-top',`-${$(document).scrollTop()}px`)         
+        scrollTopVal = $(document).scrollTop()
         $('.header-nav').addClass('nav-show');  
         $('.menu-icons').addClass('active');
     }); 
-    $('.menu-icons.mob-nav-close').click(function(){   
+    $('.menu-icons.mob-nav-close').click(function(){
         $('.header-nav').removeClass('nav-show');  
         $('.menu-icons').removeClass('active');
-        $(document).scrollTop(ht)
+        $(document).scrollTop(scrollTopVal)
     }); 
     
     $('.mg-list-main .mg-list-heading').click(function(){            
@@ -58,11 +57,10 @@ $(document).ready(function(){
     }); 
     
     $(document).mouseup(function(e){ 
-        if (!$(".header-nav nav").is(e.target) && $(".header-nav nav").has(e.target).length === 0){
+        if ($('.menu-icons').hasClass('active') && (!$(".header-nav nav").is(e.target) && $(".header-nav nav").has(e.target).length === 0)){
             $(".header-nav").removeClass('nav-show');
             $(".menu-icons").removeClass('active');
-            $(document).scrollTop(ht)
-            // $('body').removeClass('overflow-hidden');
+            $(document).scrollTop(scrollTopVal)
         }
         if (!$(".header-search-form-wpr").is(e.target) && $(".header-search-form-wpr").has(e.target).length === 0 && !$(".header-search-li").is(e.target) && $(".header-search-li").has(e.target).length === 0){
             $(".header-search").removeClass('open'); 
