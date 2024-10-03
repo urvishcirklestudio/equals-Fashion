@@ -172,7 +172,13 @@ video {
   list-style: none;
 }
 
-/* HTML5 display-role reset for older browsers */
+
+body:has(.header-nav.nav-show){
+  position: fixed;
+  width: 100%;
+  top: var(--scroll-top);
+}
+
 
 article,
 aside,
@@ -191,7 +197,7 @@ section {
 html {
   -webkit-text-size-adjust: 100%;
   outline: none;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 html.flexbox {
@@ -972,6 +978,8 @@ p {
 /* ==========================================================
                       COLLECTION PAGE
 ==========================================================*/
+
+ 
 
 /* ==========================================================
                   SIDEBAR DRAWER
