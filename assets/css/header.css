@@ -887,6 +887,6 @@ header {
 
 @media screen and (max-width:480px) {
     .header-nav nav {
-        width: 100%;
+        width: 60%;
     }
 }
