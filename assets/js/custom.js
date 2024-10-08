@@ -15,48 +15,69 @@ $(document).ready(function(){
     $('header').css('--header-height',`${$('header').outerHeight()}px`) 
     // $(".bordered").css("border", "1px solid black");
 
-    $('.nav-items > a').click(function(e){         
+    $(document).on('click','.nav-items > a',function(e){         
             $(this).parents('.nav-items').find('.inner-menu').addClass('open') 
             $(this).parents('.nav-items').find('.inner-menu[main-inner-open]').find('.main-back-arrow .nav-heading-name').text($(this).parents('.nav-items').attr('data-nav-name'));
     });
     var scrollTopVal =null;
-    $('.menu-icons:not(.mob-nav-close)').click(function(){ 
+    $(document).on('click','.menu-icons:not(.mob-nav-close)',function(){ 
         $('html').addClass('scrollTop');  
         $('body').css('--scroll-top',`-${$(document).scrollTop()}px`)         
         scrollTopVal = $(document).scrollTop()
         $('.header-nav').addClass('nav-show');  
         $('.menu-icons').addClass('active');
     }); 
-    $('.menu-icons.mob-nav-close').click(function(){
+    $(document).on('click','.menu-icons.mob-nav-close',function(){
         $('.header-nav').removeClass('nav-show');  
         $('.menu-icons').removeClass('active');
         $(document).scrollTop(scrollTopVal)
         $('html').removeClass('scrollTop');
     }); 
     
-    $('.mg-list-main .mg-list-heading').click(function(){            
+    $(document).on('click','.mg-list-main .mg-list-heading',function(){            
         $(this).siblings('.mg-links-wpr').addClass('open') 
         $(this).siblings('.mg-links-wpr').find('.inner-back-arrow .nav-heading-name').text($(this).attr('data-nav-name'))
     });
     
-    $('.main-back-arrow .icons').click(function(){            
+    $(document).on('click','.main-back-arrow .icons',function(){            
         $(this).parents('.inner-menu').removeClass('open')     
     });
-    $('.inner-back-arrow .icons').click(function(){       
+    $(document).on('click','.inner-back-arrow .icons',function(){       
         $(this).parents('.mg-links-wpr').removeClass('open')     
     });
-    $('.header-search-li .search-icons').click(function(){ 
+    $(document).on('click','.header-search-li .search-icons',function(){ 
         $('.header-search').toggleClass('open'); 
     }); 
-    $('[data-open-popup]').click(function(){  
+    $(document).on('click','[data-open-popup]',function(){  
         var openId= $(this).data('open-popup'); 
         $(openId).addClass('open')
     }); 
-    $('[data-close-popup]').click(function(){  
+    $(document).on('click','[data-close-popup]',function(){  
         var CloseId= $(this).data('close-popup'); 
         $(CloseId).removeClass('open')
         
     }); 
+    $(document).on('click','.wishlist-btn', function(){  
+        if($(this).parents('.product-items')){
+            $(this).parents('.product-items').find('.wishlist-btn .btn').toggleClass('active')
+        } 
+        
+        if($(this).parents('.wishlist-cart-wpr')){
+            $(this).parents('.wishlist-cart-wpr').find('.wishlist-btn .btn').toggleClass('active')
+        }
+    });   
+    $(document).on('click','[data-qty]', function(){  
+        var qtyActions = $(this).data('qty');
+        var productQuantity = parseInt($(this).parents('.pro-qty-wpr').find('input').val())
+        
+        if(qtyActions == 'plus'){ 
+            $(this).parents('.pro-qty-wpr').find('input').val(productQuantity + 1)
+        }
+        else if(qtyActions == 'minus'){
+            $(this).parents('.pro-qty-wpr').find('input').val(productQuantity - 1)
+        }
+        
+    }) 
     
     $(document).mouseup(function(e){ 
         if ($('.menu-icons').hasClass('active') && (!$(".header-nav nav").is(e.target) && $(".header-nav nav").has(e.target).length === 0)){
