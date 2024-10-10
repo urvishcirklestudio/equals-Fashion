@@ -12,7 +12,7 @@ $(document).ready(function(){
         disableOnInteraction: true       
     });
 
-    $('header').css('--header-height',`${$('header').outerHeight()}px`) 
+    $('body').css('--header-height',`${$('header').outerHeight()}px`) 
     // $(".bordered").css("border", "1px solid black");
 
     $(document).on('click','.nav-items > a',function(e){         
@@ -287,6 +287,15 @@ $(document).ready(function(){
             }
         })
     }
+    $(document).on('click', '.accordion-button',function(){        
+        $(this).parent('.accordion-items').siblings().find('.accordion-button').attr('aria-label','false').parent('.accordion-items').find('.accordion-body').slideUp();
+
+        if ($(this).attr('aria-label') === 'true') {
+            $(this).attr('aria-label','false').siblings('.accordion-body').slideUp()
+        } else {
+            $(this).attr('aria-label','true').siblings('.accordion-body').slideDown()
+        }
+    })
 
     // PDP SLIDER
      

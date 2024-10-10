@@ -41,9 +41,14 @@
 .pdp-left-image .main-gallery-swiper .img-box {
     padding-bottom: 120%;
 }
-
+.pdp-cont-wpr{
+    height: 100%;
+}
 .pdp-additional-details {
     padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .pdp-additional-details .pro-categories,
@@ -91,7 +96,9 @@
 }
 .pro-opt-picker{
     margin-top: 30px;
+    flex: 1;
 }
+.pro-opt-picker .opt-sticky-wpr > :not(:last-child),
 .pro-opt-picker > :not(:last-child){
     margin-bottom: 30px;
 }
