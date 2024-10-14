@@ -332,15 +332,15 @@ $(document).ready(function(){
       const enableGallerySwiper = function () {
         GallerySwiper = new Swiper(".main-gallery-swiper", {
             loop: true,
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 10,
             breakpoints: {
-                767: {
+                576: {
                     slidesPerView: 2
                 }, 
             },
             pagination: {
-                el: ".gallery-pagination",
+                el: ".main-gallery-pagination",
                 clickable: true,
             },
             navigation: {
@@ -351,4 +351,32 @@ $(document).ready(function(){
       };
       breakpoint.addListener(breakpointChecker);
       breakpointChecker();
+
+      const RecommendedSwiper = new Swiper('.recommended-swiper', {  
+        spaceBetween: 20,
+        slidesPerView: 2,  
+        navigation: {
+            nextEl: '.recommended-section .swiper--next',
+            prevEl: '.recommended-section .swiper--prev',
+        },
+        breakpoints: {
+            200: {
+                slidesPerView: 1.2
+            }, 
+            480: {
+                slidesPerView: 1.6
+            }, 
+            600: {
+                slidesPerView: 2
+            },
+            992: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            }, 
+            1280: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            }, 
+        }
+    });
 })

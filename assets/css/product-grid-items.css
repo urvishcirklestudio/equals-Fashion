@@ -50,7 +50,6 @@
     margin-left: 2px;
 }
 .product-categories-reviews .product-reviews{
-    font: 12px; 
     line-height: 1;
 } 
 .product-name{
@@ -90,6 +89,7 @@
     background-color: rgba(0,0,0,0.8); 
     border-color: rgba(0,0,0,0.8);
 }
+.wishlist-btn .btn:hover,
 .add-cart-btn .btn:hover{
     background-color: #000;
     color: var(--white);
@@ -103,7 +103,7 @@
 }
 .wishlist-btn svg{
     fill: none;
-    stroke-width: 1px;
+    stroke-width: 1.5px;
     stroke: currentColor;
 }
 .wishlist-btn .btn.active svg{

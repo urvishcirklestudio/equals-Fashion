@@ -1690,6 +1690,14 @@ body:has(.sidebar-drawer.open) {
   .filter-dwr-btn-wpr {
     gap: 10px 0;
   }
+  .modal {
+    padding: 0 10px; 
+  }
+  .modal .modal-footer,
+  .modal .modal-body,
+  .modal .modal-header {
+    padding: 10px;
+  }
 }
 
 @media screen and (max-width: 480px) {
