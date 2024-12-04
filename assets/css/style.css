@@ -311,7 +311,6 @@ label:has(input[type="checkbox"]:checked) .custom-input-type {
   background-repeat: no-repeat;
   background-size: 14px;
 }
-
 a,
 a:hover,
 a:focus,
@@ -1048,7 +1047,6 @@ h6,
 .cl-filter-value .filter-val-ul:has(.filter-val-items) {
   margin-top: 20px;
 }
-
 .cl-filter-value .filter-val-ul {
   gap: 10px;
   width: 100%;

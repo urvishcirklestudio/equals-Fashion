@@ -111,6 +111,7 @@
 }
  
 @media screen and (max-width: 991px) {
+    .product-items .product-image .pro-grid-cart-wishlist,
     .product-image .add-cart-btn{
         display: none;
     }
